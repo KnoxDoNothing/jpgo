@@ -478,7 +478,7 @@ input[type="checkbox"] {
   left: 0;
   width: 140px;
   height: 150px;
-  animation: bus-patrol 30s ease-in-out infinite;
+  animation: bus-patrol 20s ease-in-out infinite;
   will-change: transform;
 }
 
@@ -503,7 +503,7 @@ input[type="checkbox"] {
 
 @keyframes bus-patrol {
   0% {
-    transform: translateX(-180px) scaleX(-1);
+    transform: translateX(calc(100cqw - 1300px)) scaleX(-1);
   }
   45% {
     transform: translateX(calc(100cqw - 400px)) scaleX(-1);
@@ -512,10 +512,10 @@ input[type="checkbox"] {
     transform: translateX(calc(100cqw - 400px)) scaleX(1);
   }
   95% {
-    transform: translateX(-150px) scaleX(1);
+    transform: translateX(calc(100cqw - 1200px)) scaleX(1);
   }
   100% {
-    transform: translateX(-180px) scaleX(-1);
+    transform: translateX(calc(100cqw - 1300px)) scaleX(-1);
   }
 }
 
