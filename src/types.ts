@@ -1,0 +1,9 @@
+export type Cat='sight'|'food'|'move'|'stay'|'shop'|'fun';
+export type ECat='food'|'move'|'stay'|'shop'|'ticket'|'other';
+export interface Tr{m:'subway'|'bus'|'train'|'walk'|'taxi'|'plane';line:string;from:string;to:string;tt:string;fare?:string;ok?:boolean}
+export interface Meal{n:string;d:string;ok?:boolean}
+export interface Ev{tr?:Tr[];meal?:Meal[];lug?:string;pick?:string;id:string;date:string;time:string;title:string;addr?:string;cat:Cat;prio?:'must'|'rec'|'skip';tbc?:boolean;alt?:boolean;note?:string;done:boolean;closed?:string[]}
+export interface Exp{id:string;date:string;amt:number;cat:ECat;note:string;prepaid?:boolean}
+export interface Bk{id:string;name:string;date:string;status:'done'|'todo'|'tbc';note?:string}
+export interface Chk{id:string;text:string;done:boolean}
+export interface State{v:1;sv?:number;events:Ev[];exps:Exp[];books:Bk[];chk:Chk[];set:{theme:'auto'|'light'|'dark';rate:number;budget:number}}

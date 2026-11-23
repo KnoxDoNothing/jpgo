@@ -1,0 +1,12 @@
+export const uid=()=>Math.random().toString(36).slice(2,10)+Date.now().toString(36);
+export const jstDate=()=>new Date().toLocaleDateString('sv',{timeZone:'Asia/Tokyo'});
+export const jstTime=()=>new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Tokyo',hour:'2-digit',minute:'2-digit'});
+export const dayDiff=(a:string,b:string)=>Math.round((Date.parse(b)-Date.parse(a))/864e5);
+export const yen=(n:number)=>'¥'+Math.round(n).toLocaleString('en-US');
+export const twd=(n:number,r:number)=>'NT$'+Math.round(n*r).toLocaleString('en-US');
+export const mapUrl=(q:string)=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
+export const wd=(d:string)=>'日一二三四五六'[new Date(d+'T00:00:00Z').getUTCDay()];
+export const md=(d:string)=>d.slice(5).replace('-','/');
+export const CAT:Record<string,string>={sight:'景點',food:'餐飲',move:'交通',stay:'住宿',shop:'購物',fun:'活動'};
+export const ECATS:Record<string,string>={food:'餐飲',move:'交通',stay:'住宿',shop:'購物',ticket:'門票娛樂',other:'其他'};
+export const PRIO:Record<string,string>={must:'必去',rec:'推薦',skip:'可刪減'};
