@@ -478,7 +478,7 @@ input[type="checkbox"] {
   left: 0;
   width: 140px;
   height: 150px;
-  animation: bus-patrol 20s ease-in-out infinite;
+  animation: bus-patrol 30s ease-in-out infinite;
   will-change: transform;
 }
 
@@ -489,7 +489,7 @@ input[type="checkbox"] {
   background-repeat: no-repeat;
   background-size: 654px 360px;
   background-position-y: -108px;
-  animation: bus-gallop 0.8s steps(5) infinite;
+  animation: bus-gallop 0.65s steps(5) infinite;
 }
 
 @keyframes bus-gallop {
@@ -503,19 +503,19 @@ input[type="checkbox"] {
 
 @keyframes bus-patrol {
   0% {
-    transform: translateX(calc(100cqw - 1300px)) scaleX(-1);
+    transform: translateX(calc(-20cqw)) scaleX(-1);
   }
   45% {
-    transform: translateX(calc(100cqw - 400px)) scaleX(-1);
+    transform: translateX(calc(100cqw)) scaleX(-1);
   }
   50% {
-    transform: translateX(calc(100cqw - 400px)) scaleX(1);
+    transform: translateX(calc(110cqw)) scaleX(1);
   }
   95% {
-    transform: translateX(calc(100cqw - 1200px)) scaleX(1);
+    transform: translateX(calc(-20cqw)) scaleX(1);
   }
   100% {
-    transform: translateX(calc(100cqw - 1300px)) scaleX(-1);
+    transform: translateX(calc(-20cqw)) scaleX(-1);
   }
 }
 
